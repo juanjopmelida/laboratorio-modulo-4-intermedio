@@ -13,7 +13,7 @@ export const PuppiesPage: React.FC = () => {
   React.useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
       .then((response) => response.json())
-      .then((json) => setCocktails({cocktails: json.drinks}));
+      .then((json) => setCocktails(json));
   }, []);
 
   return (
