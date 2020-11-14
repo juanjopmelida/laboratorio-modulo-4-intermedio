@@ -1,3 +1,3 @@
-export * from "./login.scene";
-export * from "./kitties.scene";
-export * from "./puppies.scene";
+export * from "./login/login.scene";
+export * from "./kitties/kitties.scene";
+export * from "./puppies/puppies.scene";

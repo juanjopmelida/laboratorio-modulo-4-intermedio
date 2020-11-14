@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, generatePath } from "react-router-dom";
+import { imgStyles } from "./puppies.styles";
 
 interface CocktailEntity {
   idDrink: string;
@@ -13,7 +14,7 @@ export const PuppiesPage: React.FC = () => {
   React.useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
       .then((response) => response.json())
-      .then((json) => setCocktails(json));
+      .then((json) => setCocktails(json.drinks));
   }, []);
 
   return (
@@ -28,11 +29,12 @@ export const PuppiesPage: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          {cocktails.map(cocktail => (
+          {cocktails.map((cocktail) => (
             <tr key={cocktail.idDrink}>
               <td>{cocktail.strDrink}</td>
-              <td><img src={cocktail.strDrinkThumb} /></td>
-              <td><input type="check">Buy</input></td>
+              <td>
+                <img style={imgStyles} src={cocktail.strDrinkThumb} />
+              </td>
             </tr>
           ))}
         </tbody>

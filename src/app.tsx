@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { LoginPage } from "./scenes/login.scene";
-import { KittiesPage } from "./scenes/kitties.scene";
-import { PuppiesPage } from "./scenes/puppies.scene";
+import { LoginPage } from "./scenes/login/login.scene";
+import { KittiesPage } from "./scenes/kitties/kitties.scene";
+import { PuppiesPage } from "./scenes/puppies/puppies.scene";
 
 export const App = () => {
   return (
@@ -11,10 +11,10 @@ export const App = () => {
         <Route exact path="/">
           <LoginPage />
         </Route>
-        <Route path="/scenes/kitties.scene">
+        <Route path="/kitties.scene">
           <KittiesPage />
         </Route>
-        <Route path="/scenes/puppies.scene">
+        <Route path="/puppies.scene">
           <PuppiesPage />
         </Route>
       </Switch>
