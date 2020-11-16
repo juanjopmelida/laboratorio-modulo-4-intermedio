@@ -1,8 +1,8 @@
-import {generatePath} from "react-router-dom"
+import { generatePath } from "react-router-dom";
 
 interface SwitchRoutes {
-    root: string;
-    login: string;
-    kitties: string;
-    puppies: string;
+  root: string;
+  login: string;
+  alcoholic: string;
+  nonalcoholic: string;
 }

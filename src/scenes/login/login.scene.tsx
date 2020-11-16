@@ -9,7 +9,7 @@ export const LoginPage: React.FC = () => {
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username === "admin" && password === "aaa") {
-      history.push("./puppies.scene");
+      history.push("./alcoholic.scene");
     } else {
       alert("User / password not valid, pssst... maybe admin/test?");
     }

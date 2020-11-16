@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, generatePath } from "react-router-dom";
-import { imgStyles } from "./puppies.styles";
+import { imgStyles } from "./alcoholic.styles";
 
 interface CocktailEntity {
   idDrink: string;
@@ -8,7 +8,7 @@ interface CocktailEntity {
   strDrinkThumb: string;
 }
 
-export const PuppiesPage: React.FC = () => {
+export const AlcoholicPage: React.FC = () => {
   const [cocktails, setCocktails] = React.useState<CocktailEntity[]>([]);
 
   React.useEffect(() => {
@@ -19,7 +19,7 @@ export const PuppiesPage: React.FC = () => {
 
   return (
     <>
-      <h2>Hello from cocktails page</h2>
+      <h2>Alcoholic Cocktails</h2>
       <table>
         <thead>
           <tr>
